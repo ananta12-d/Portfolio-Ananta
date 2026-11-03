@@ -1,0 +1,1840 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ananta Kishore Swain | Software Engineer — Applied AI, MLOps & Backend Architecture</title>
+  <meta name="description" content="Portfolio of Ananta Kishore Swain — Software Engineer specializing in Applied AI, MLOps, Hybrid RAG architectures, and high-concurrency backend ecosystems (1M+ msg/s).">
+  <meta name="keywords" content="Ananta Kishore Swain, ananta12-d, Software Engineer, Applied AI, MLOps, RAG, Generative AI, FastAPI, Docker, MQTT, Kafka, Cassandra, Llama 3.2, Qdrant">
+  <meta name="author" content="Ananta Kishore Swain">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Ananta Kishore Swain | Software Engineer — Applied AI & MLOps">
+  <meta property="og:description" content="Architecting zero-trust, high-concurrency data ecosystems that make Agentic AI production-ready.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="photo/Ananta_profile_photo_2.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/projects.css">
+  <link rel="stylesheet" href="css/chatbot.css">
+</head>
+<body>
+
+  <!-- ==========================================
+       AMBIENT GLOW BACKGROUND
+       ========================================== -->
+  <div class="ambient-container" aria-hidden="true">
+    <div class="ambient-orb ambient-orb-1"></div>
+    <div class="ambient-orb ambient-orb-2"></div>
+    <div class="ambient-orb ambient-orb-3"></div>
+    <div class="ambient-grid"></div>
+  </div>
+
+  <!-- ==========================================
+       STARTING ANIMATION (PRELOADER / BOOT SCREEN)
+       ========================================== -->
+  <div id="boot-screen" role="dialog" aria-label="System Initialization">
+    <div class="boot-grid-bg"></div>
+    <button class="boot-skip-btn" id="boot-skip-btn" aria-label="Skip Boot Intro">
+      SKIP INTRO <span style="opacity:0.6;">[ESC]</span>
+    </button>
+
+    <div class="boot-container">
+      <div class="boot-monogram-wrap">
+        <div class="boot-ring-outer"></div>
+        <div class="boot-ring-inner"></div>
+        <div class="boot-monogram">AKS</div>
+      </div>
+
+      <h1 class="boot-title">ANANTA KISHORE SWAIN</h1>
+      <p class="boot-subtitle">&lt; APPLIED AI & MLOPS ARCHITECT /&gt;</p>
+
+      <div class="boot-terminal-box" id="boot-terminal-log" aria-live="polite">
+        <!-- Lines injected via boot-animation.js -->
+      </div>
+
+      <div class="boot-progress-wrap">
+        <div class="boot-progress-bar-bg">
+          <div class="boot-progress-fill"></div>
+        </div>
+        <span class="boot-percentage">0%</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       INTRO POPUP (MODAL BRIEFING)
+       ========================================== -->
+  <div id="intro-modal" class="intro-modal-wrap" role="dialog" aria-modal="true" aria-labelledby="intro-title">
+    <div class="intro-backdrop"></div>
+    <div class="intro-modal-card neu-glass-card glass-sheen">
+      <button class="intro-close-btn" aria-label="Close Briefing Modal">
+        <i class="fas fa-times"></i>
+      </button>
+
+      <div class="intro-header-block">
+        <div class="intro-avatar-frame">
+          <picture>
+            <source srcset="photo/Ananta_profile_photo_2.webp" type="image/webp">
+            <img src="photo/Ananta_profile_photo_2.png" alt="Ananta Kishore Swain Portrait" width="76" height="76">
+          </picture>
+          <div class="intro-avatar-status" title="Active & Available"></div>
+        </div>
+        <div class="intro-header-text">
+          <div class="neu-badge" style="margin-bottom:0.4rem;">
+            <span class="status-dot"></span> OPEN TO NEW ROLES
+          </div>
+          <h3 id="intro-title">Welcome! Meet Ananta Kishore Swain</h3>
+          <p>Software Engineer — Applied AI, MLOps & High-Concurrency Backend Architecture</p>
+        </div>
+      </div>
+
+      <div class="intro-highlight-grid">
+        <div class="intro-highlight-item">
+          <div class="intro-highlight-icon">
+            <i class="fas fa-brain"></i>
+          </div>
+          <div class="intro-highlight-text">
+            <strong>Self-Hosted LLMs & Hybrid RAG</strong>
+            <span>Deployed deterministic enterprise agents on Llama 3.2 (3B) with Qdrant + BM25 Reciprocal Rank Fusion, cutting hallucinations and API costs to $0.</span>
+          </div>
+        </div>
+
+        <div class="intro-highlight-item">
+          <div class="intro-highlight-icon">
+            <i class="fas fa-bolt"></i>
+          </div>
+          <div class="intro-highlight-text">
+            <strong>1M+ msg/sec Distributed Ingestion</strong>
+            <span>Migrated core telemetry to Apache Cassandra and built Kafka/TBMQ pipelines for millions of edge IoT devices with 5× storage efficiency.</span>
+          </div>
+        </div>
+
+        <div class="intro-highlight-item">
+          <div class="intro-highlight-icon">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <div class="intro-highlight-text">
+            <strong>Zero-Trust & Sub-50ms Latency</strong>
+            <span>Asynchronous SSE streaming (&lt;50ms), WireGuard VPN platforms (500+ users), Docker CPU governance (99.9% uptime), and SOC2/ISO 27001 prompt defense.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="intro-action-row">
+        <label class="intro-checkbox-wrap">
+          <input type="checkbox" id="dont-show-intro">
+          <span>Don't show this intro automatically again</span>
+        </label>
+
+        <div class="intro-action-buttons">
+          <a href="Ananta_Kishore_Swain_Resume.pdf" download="Ananta_Kishore_Swain_Resume.pdf" class="neu-btn" style="padding:0.6rem 1.1rem; font-size:0.85rem;">
+            <i class="fas fa-file-download"></i> Download Resume
+          </a>
+          <button id="intro-copy-email-btn" class="neu-btn" style="padding:0.6rem 1.1rem; font-size:0.85rem;">
+            <i class="fas fa-copy"></i> Copy Email
+          </button>
+          <button id="intro-explore-btn" class="neu-btn neu-btn-primary" style="padding:0.6rem 1.25rem; font-size:0.85rem;">
+            <i class="fas fa-compass"></i> Explore Portfolio
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       NAVIGATION BAR (SPACIOUS, MODERN DOCK)
+       ========================================== -->
+  <header id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-brand" aria-label="Ananta Kishore Swain Home">
+        <div class="nav-logo-icon">AKS</div>
+        <div class="nav-brand-text">
+          <span class="nav-brand-name">Ananta Swain</span>
+          <span class="nav-brand-tag">AI & MLOps</span>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#architecture" class="nav-link">Architecture</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-tools">
+        <button id="nav-chat-btn" class="neu-btn-ai-pill" title="Chat with AKS-AI Agent" aria-label="Chat with AI">
+          <span>✨</span> Ask AI <span class="ai-pulse-dot"></span>
+        </button>
+
+        <a href="https://github.com/ananta12-d" target="_blank" rel="noopener noreferrer" class="neu-icon-btn" title="GitHub Profile: ananta12-d" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+
+        <button id="theme-toggle-btn" class="neu-icon-btn" title="Toggle Theme" aria-label="Toggle Theme">
+          <i class="fas fa-sun"></i>
+        </button>
+
+        <a href="Ananta_Kishore_Swain_Resume.pdf" download="Ananta_Kishore_Swain_Resume.pdf" class="neu-btn neu-btn-primary" style="padding:0.48rem 1.15rem; font-size:0.84rem;">
+          <i class="fas fa-file-pdf"></i> Resume
+        </a>
+
+        <button class="neu-icon-btn mobile-menu-btn" aria-label="Toggle Mobile Menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div id="mobile-nav-drawer" class="mobile-nav-drawer">
+    <a href="#overview" class="mobile-nav-link"><i class="fas fa-home"></i> Overview</a>
+    <a href="#projects" class="mobile-nav-link"><i class="fas fa-laptop-code"></i> Projects</a>
+    <a href="#architecture" class="mobile-nav-link"><i class="fas fa-project-diagram"></i> Architecture</a>
+    <a href="#experience" class="mobile-nav-link"><i class="fas fa-briefcase"></i> Experience</a>
+    <a href="#skills" class="mobile-nav-link"><i class="fas fa-code"></i> Skills</a>
+    <a href="#terminal" class="mobile-nav-link"><i class="fas fa-terminal"></i> Terminal</a>
+    <a href="#education" class="mobile-nav-link"><i class="fas fa-graduation-cap"></i> Education & Honors</a>
+    <a href="#contact" class="mobile-nav-link"><i class="fas fa-envelope"></i> Contact</a>
+  </div>
+
+  <!-- ==========================================
+       HERO SECTION
+       ========================================== -->
+  <main>
+    <section id="hero" class="hero-section">
+      <div class="container hero-grid">
+        
+        <!-- Left: Text & Pitch -->
+        <div class="hero-content">
+          <div class="hero-badge-wrap">
+            <span class="neu-badge">
+              <span class="status-dot"></span> AVAILABLE FOR APPLIED AI & MLOPS CHALLENGES
+            </span>
+          </div>
+
+          <h1 class="hero-title">
+            Architecting Zero-Trust <br>
+            <span class="gradient-text">Applied AI & Backend Ecosystems</span>
+          </h1>
+
+          <div class="hero-typewriter-wrap">
+            <span>&gt;</span> <span id="hero-typewriter">Applied AI & MLOps Specialist</span><span class="typewriter-cursor"></span>
+          </div>
+
+          <p class="hero-summary">
+            Hello, I'm <strong>Ananta Kishore Swain</strong>, a Software Engineer bridging high-performance backend infrastructure with Generative AI. Currently pursuing an MCA in Artificial Intelligence at Manipal Institute of Technology. I architect containerized environments, distributed streaming pipelines, and hybrid RAG systems that make Agentic AI production-ready for enterprise environments.
+          </p>
+
+          <div class="hero-actions">
+            <a href="Ananta_Kishore_Swain_Resume.pdf" download="Ananta_Kishore_Swain_Resume.pdf" class="neu-btn neu-btn-primary glass-sheen">
+              <i class="fas fa-download"></i> Download Resume (PDF)
+            </a>
+            <a href="#projects" class="neu-btn">
+              <i class="fas fa-laptop-code"></i> View Projects
+            </a>
+            <a href="#architecture" class="neu-btn">
+              <i class="fas fa-layer-group"></i> Architecture
+            </a>
+          </div>
+
+          <div class="hero-socials">
+            <a href="https://github.com/ananta12-d" target="_blank" rel="noopener noreferrer" class="neu-icon-btn" title="GitHub: ananta12-d" aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/ananta-kishore-swain-6282472bb" target="_blank" rel="noopener noreferrer" class="neu-icon-btn" title="LinkedIn Profile" aria-label="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://hackindia.org/profile/ananta_kishore_swain" target="_blank" rel="noopener noreferrer" class="neu-icon-btn" title="HackIndia Profile" aria-label="HackIndia">
+              <i class="fas fa-terminal"></i>
+            </a>
+            <a href="https://www.c-sharpcorner.com/members/ananta-kishore-swain" target="_blank" rel="noopener noreferrer" class="neu-icon-btn" title="C# Corner Profile" aria-label="C# Corner">
+              <i class="fas fa-code"></i>
+            </a>
+            <a href="mailto:opbitu855@gmail.com" class="neu-icon-btn" title="Send Email" aria-label="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
+            <a href="tel:+919090078348" class="neu-icon-btn" title="Call Mobile" aria-label="Phone">
+              <i class="fas fa-phone-alt"></i>
+            </a>
+            <span class="neu-badge" style="text-transform:none; font-family:var(--font-code); font-size:0.75rem;">
+              <i class="fas fa-map-marker-alt" style="color:var(--accent-cyan);"></i> Bhubaneswar, India
+            </span>
+          </div>
+        </div>
+
+        <!-- Right: 3D Neumorphic Glass Photo Card -->
+        <div class="hero-photo-column">
+          <div class="hero-photo-wrapper">
+            <!-- Floating Chips -->
+            <div class="floating-chip floating-chip-1">
+              <i class="fas fa-robot"></i>
+              <span>Llama 3.2 Self-Hosted</span>
+            </div>
+            <div class="floating-chip floating-chip-2">
+              <i class="fas fa-chart-line"></i>
+              <span>1M+ msg/sec Kafka & Cassandra</span>
+            </div>
+            <div class="floating-chip floating-chip-3">
+              <i class="fas fa-lock"></i>
+              <span>WireGuard & Zero-Trust</span>
+            </div>
+
+            <div class="hero-photo-card glass-sheen">
+              <div class="hero-photo-glow-border"></div>
+              <div class="hero-photo-inner">
+                <picture>
+                  <source srcset="photo/Ananta_profile_photo_2.webp" type="image/webp">
+                  <img src="photo/Ananta_profile_photo_2.png" alt="Ananta Kishore Swain - Software Engineer" loading="eager" width="380" height="456">
+                </picture>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         PRODUCTION METRICS BAR
+         ========================================== -->
+    <section id="overview" class="metrics-section">
+      <div class="container">
+        <div class="metrics-grid">
+          
+          <div class="metric-card">
+            <div class="metric-icon"><i class="fas fa-tachometer-alt"></i></div>
+            <div class="metric-number">1M+</div>
+            <div class="metric-label">Telemetry Ingestion</div>
+            <div class="metric-sub">msgs/sec scaled via Apache Cassandra migration</div>
+          </div>
+
+          <div class="metric-card">
+            <div class="metric-icon"><i class="fas fa-bolt"></i></div>
+            <div class="metric-number">&lt;50ms</div>
+            <div class="metric-label">AI Response Latency</div>
+            <div class="metric-sub">Asynchronous SSE streaming & semantic Redis caching</div>
+          </div>
+
+          <div class="metric-card">
+            <div class="metric-icon"><i class="fas fa-compress-arrows-alt"></i></div>
+            <div class="metric-number">5×</div>
+            <div class="metric-label">Storage Efficiency</div>
+            <div class="metric-sub">Optimized time-series isolation reducing cloud costs</div>
+          </div>
+
+          <div class="metric-card">
+            <div class="metric-icon"><i class="fas fa-server"></i></div>
+            <div class="metric-number">99.9%</div>
+            <div class="metric-label">API Workload Uptime</div>
+            <div class="metric-sub">Enforced via Docker CPU governance under heavy LLM tasks</div>
+          </div>
+
+          <div class="metric-card">
+            <div class="metric-icon"><i class="fas fa-shield-virus"></i></div>
+            <div class="metric-number">500+</div>
+            <div class="metric-label">Concurrent VPN Users</div>
+            <div class="metric-sub">WireGuard, FastAPI & PostgreSQL SSH/SFTP access</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         FEATURED PROJECTS SECTION (WHAT I MADE & HOW THEY WORK)
+         ========================================== -->
+    <section id="projects" class="section">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-tag">
+            <span class="neu-badge"><i class="fas fa-code-branch"></i> FEATURED CODE & BUILDS</span>
+          </div>
+          <h2>Projects & Engineering Systems</h2>
+          <p>
+            Real-world systems, machine learning pipelines, and HackIndia hackathon submissions. Each project highlights the problem solved, its dataflow mechanism, and direct repository access.
+          </p>
+        </div>
+
+        <!-- Filter Tabs for Projects -->
+        <div class="skills-filter-tabs" style="margin-bottom:2.5rem;">
+          <button class="project-filter-btn filter-tab-btn active" data-filter="all">All Systems (9)</button>
+          <button class="project-filter-btn filter-tab-btn" data-filter="hackindia">🏆 HackIndia Submissions (3)</button>
+          <button class="project-filter-btn filter-tab-btn" data-filter="ai">🧠 AI & RAG</button>
+          <button class="project-filter-btn filter-tab-btn" data-filter="production">⚡ Production Systems</button>
+        </div>
+
+        <div class="projects-grid">
+          
+          <!-- Project 1: Local RAG Assistant -->
+          <div class="project-card neu-glass-card glass-sheen" data-category="ai">
+            <div>
+              <div class="project-card-header">
+                <span class="project-badge">PRIVACY-FIRST • CLIENT-SIDE RAG</span>
+                <a href="https://github.com/ananta12-d/Local-RAG-Assistant" target="_blank" rel="noopener noreferrer" class="project-github-link" title="View Source on GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+              <h3 class="project-title">Local RAG Assistant</h3>
+              <p class="project-pitch">
+                A fully browser-based, zero-cloud Retrieval-Augmented Generation (RAG) system with 100% local airgap privacy. Upload documents, generate client-side vector embeddings, and query local LLMs without external API fees or data leakage.
+              </p>
+            </div>
+
+            <!-- How It Works Mechanism Box -->
+            <div class="project-mechanism-box">
+              <div class="mechanism-title">
+                <i class="fas fa-cogs"></i> How It Works Under the Hood
+              </div>
+              <ul class="mechanism-steps">
+                <li class="mechanism-step">
+                  <span class="step-num">01</span>
+                  <div class="step-content"><strong>In-Browser Parsing:</strong> Ingests PDFs & text files, splitting them into overlapping semantic chunk windows entirely within the browser sandbox.</div>
+                </li>
+                <li class="mechanism-step">
+                  <span class="step-num">02</span>
+                  <div class="step-content"><strong>Client Vectorization:</strong> Computes high-dimensional vector embeddings locally using WebAssembly/Transformers.js without remote server calls.</div>
+                </li>
+                <li class="mechanism-step">
+                  <span class="step-num">03</span>
+                  <div class="step-content"><strong>Cosine Similarity Retrieval:</strong> Performs instant mathematical vector dot-product queries to retrieve the top-K most relevant chunks for user prompts.</div>
+                </li>
+                <li class="mechanism-step">
+                  <span class="step-num">04</span>
+                  <div class="step-content"><strong>Ollama Local Inference:</strong> Streams augmented context directly into a local Ollama runtime (Llama 3 / Mistral) over localhost HTTP.</div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="project-footer">
+              <div class="project-tags">
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">Ollama</span>
+                <span class="tech-tag">Vector Embeddings</span>
+                <span class="tech-tag">Client RAG</span>
+                <span class="tech-tag">Zero Cloud Egress</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/ananta12-d/Local-RAG-Assistant" target="_blank" rel="noopener noreferrer" class="neu-btn neu-btn-primary" style="padding:0.55rem 1.1rem; font-size:0.84rem;">
+                  <i class="fab fa-github"></i> View Repository
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2: AI Academic Success Tracker -->
+          <div class="project-card neu-glass-card glass-sheen" data-category="ai">
+            <div>
+              <div class="project-card-header">
+                <span class="project-badge">MACHINE LEARNING + GEN AI</span>
+                <a href="https://github.com/ananta12-d/AI-Academic-Success-Tracker" target="_blank" rel="noopener noreferrer" class="project-github-link" title="View Source on GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+              <h3 class="project-title">AI-Powered Academic Success Tracker</h3>
+              <p class="project-pitch">
+                An enterprise-grade educational analytics platform that predicts student academic risk using XGBoost, provides transparent SHAP explainability, and generates automated personalized intervention plans via Google Gemini.
+              </p>
+            </div>
+
+            <!-- How It Works Mechanism Box -->
+            <div class="project-mechanism-box">
+              <div class="mechanism-title">
+                <i class="fas fa-cogs"></i> How It Works Under the Hood
+              </div>
+              <ul class="mechanism-steps">
+                <li class="mechanism-step">
+                  <span class="step-num">01</span>
+                  <div class="step-content"><strong>XGBoost Risk Classifier:</strong> Multi-variate classifier trained on historical academic telemetry to predict underperformance probabilities.</div>
+                </li>
+                <li class="mechanism-step">
+                  <span class="step-num">02</span>
+                  <div class="step-content"><strong>SHAP Explainability:</strong> Computes Shapley Additive exPlanations to explain exact feature weights behind each risk classification.</div>
+                </li>
+                <li class="mechanism-step">
+                  <span class="step-num">03</span>
+                  <div class="step-content"><strong>Gemini Action Generator:</strong> Ingests SHAP feature attributions into Google Gemini API to automatically draft personalized recovery roadmaps.</div>
+                </li>
+                <li class="mechanism-step">
+                  <span class="step-num">04</span>
+                  <div class="step-content"><strong>Role-Based Auth & UI:</strong> Secured via JSON Web Tokens (JWT) with interactive visualizer dashboards for counselors and students.</div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="project-footer">
+              <div class="project-tags">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">XGBoost</span>
+                <span class="tech-tag">SHAP (XAI)</span>
+                <span class="tech-tag">Google Gemini</span>
+                <span class="tech-tag">JWT Security</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/ananta12-d/AI-Academic-Success-Tracker" target="_blank" rel="noopener noreferrer" class="neu-btn neu-btn-primary" style="padding:0.55rem 1.1rem; font-size:0.84rem;">
+                  <i class="fab fa-github"></i> View Repository
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3: Production IoT & Telemetry Platform -->
+          <div class="project-card neu-glass-card glass-sheen" data-category="production">
+            <div>
+              <div class="project-card-header">
+                <span class="project-badge">HIGH-SCALE INFRASTRUCTURE • 1M+ MSG/S</span>
+                <a href="#architecture" class="project-github-link" title="Explore Architecture Diagram">
+                  <i class="fas fa-project-diagram"></i>
+                </a>
+              </div>
+              <h3 class="project-title">IoT Telemetry & Fleet AI Platform</h3>
+              <p class="project-pitch">
+                Production-grade micro-storage and distributed streaming telemetry infrastructure scaling to 1,000,000+ messages/sec at Insectika Biotech, integrated with self-hosted Llama 3.2 AI agents for predictive enterprise fleet management.
+              </p>
+            </div>
+
+            <!-- How It Works Mechanism Box -->
+            <div class="project-mechanism-box">
+              <div class="mechanism-title">
+                <i class="fas fa-cogs"></i> How It Works Under the Hood
+              </div>
+              <ul class="mechanism-steps">
+                <li class="mechanism-step">
+                  <span class="step-num">01</span>
+                  <div class="step-content"><strong>Edge Protocols:</strong> Ingests live telemetry from edge IoT sensors via MQTT, TCP/UDP routing engines, and ThingsBoard TBMQ.</div>
+                </li>
+                <li class="mechanism-step">
+                  <span class="step-num">02</span>
+                  <div class="step-content"><strong>Kafka & Redis Bus:</strong> High-throughput event-streaming backbone with parallel consumer groups across edge device clusters.</div>
+                </li>
+                <li class="mechanism-step">
+                  <span class="step-num">03</span>
+                  <div class="step-content"><strong>Cassandra Data Lake:</strong> Migrated from Postgres to Apache Cassandra to eliminate lock contention, achieving 5× storage efficiency.</div>
+                </li>
+                <li class="mechanism-step">
+                  <span class="step-num">04</span>
+                  <div class="step-content"><strong>Hybrid RAG & Llama 3.2:</strong> Self-hosted Llama 3.2 (3B) with Qdrant vector retrieval monitors telemetry logs to predict equipment failure.</div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="project-footer">
+              <div class="project-tags">
+                <span class="tech-tag">Apache Cassandra</span>
+                <span class="tech-tag">Apache Kafka</span>
+                <span class="tech-tag">FastAPI</span>
+                <span class="tech-tag">Llama 3.2</span>
+                <span class="tech-tag">Qdrant</span>
+                <span class="tech-tag">MQTT</span>
+              </div>
+              <div class="project-actions">
+                <a href="#architecture" class="neu-btn neu-btn-primary" style="padding:0.55rem 1.1rem; font-size:0.84rem;">
+                  <i class="fas fa-layer-group"></i> Inspect Blueprint
+                </a>
+                <a href="https://github.com/ananta12-d/IOT-Learnings" target="_blank" rel="noopener noreferrer" class="neu-btn" style="padding:0.55rem 1.1rem; font-size:0.84rem;">
+                  <i class="fab fa-github"></i> IoT Repos
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4: WireGuard VPN Platform -->
+          <div class="project-card neu-glass-card glass-sheen" data-category="production">
+            <div>
+              <div class="project-card-header">
+                <span class="project-badge">ZERO-TRUST NETWORKING</span>
+                <a href="#architecture" class="project-github-link" title="Explore Architecture Diagram">
+                  <i class="fas fa-lock"></i>
+                </a>
+              </div>
+              <h3 class="project-title">WireGuard VPN Management Platform</h3>
+              <p class="project-pitch">
+                Scalable zero-trust remote access platform built using FastAPI, PostgreSQL, and WireGuard in six weeks, providing secure browser-based SSH, SFTP, and reverse-proxy access for 500+ concurrent enterprise users and edge nodes.
+              </p>
+            </div>
+
+            <!-- How It Works Mechanism Box -->
+            <div class="project-mechanism-box">
+              <div class="mechanism-title">
+                <i class="fas fa-cogs"></i> How It Works Under the Hood
+              </div>
+              <ul class="mechanism-steps">
+                <li class="mechanism-step">
+                  <span class="step-num">01</span>
+                  <div class="step-content"><strong>Cryptographic Tunneling:</strong> Programmatically provisions kernel-level WireGuard network interfaces and dynamic cryptographic key pairs.</div>
+                </li>
+                <li class="mechanism-step">
+                  <span class="step-num">02</span>
+                  <div class="step-content"><strong>FastAPI Orchestrator:</strong> Asynchronous endpoints handle peer lifecycle, subnet IP assignment, and connection health probes.</div>
+                </li>
+                <li class="mechanism-step">
+                  <span class="step-num">03</span>
+                  <div class="step-content"><strong>Browser SSH/SFTP:</strong> Encrypted WebSocket tunnels bridge browser terminals directly to edge machines without installing local clients.</div>
+                </li>
+                <li class="mechanism-step">
+                  <span class="step-num">04</span>
+                  <div class="step-content"><strong>Zero-Trust Governance:</strong> Multi-tenant access controls, SOC2-compliant connection audits, and real-time session termination.</div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="project-footer">
+              <div class="project-tags">
+                <span class="tech-tag">WireGuard</span>
+                <span class="tech-tag">FastAPI</span>
+                <span class="tech-tag">PostgreSQL</span>
+                <span class="tech-tag">WebSockets</span>
+                <span class="tech-tag">Zero-Trust</span>
+              </div>
+              <div class="project-actions">
+                <a href="#architecture" class="neu-btn neu-btn-primary" style="padding:0.55rem 1.1rem; font-size:0.84rem;">
+                  <i class="fas fa-shield-alt"></i> Architecture Specs
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 5: LifeOS Productivity Engine -->
+          <div class="project-card neu-glass-card glass-sheen" data-category="production">
+            <div>
+              <div class="project-card-header">
+                <span class="project-badge">BACKEND ARCHITECTURE</span>
+                <a href="https://github.com/ananta12-d/lifeos" target="_blank" rel="noopener noreferrer" class="project-github-link" title="View Source on GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+              <h3 class="project-title">LifeOS Productivity Backend</h3>
+              <p class="project-pitch">
+                A modular, high-concurrency personal productivity and life tracking system engineered with FastAPI and PostgreSQL, featuring asynchronous task scheduling, habit telemetry, and structured data pipelines.
+              </p>
+            </div>
+
+            <!-- How It Works Mechanism Box -->
+            <div class="project-mechanism-box">
+              <div class="mechanism-title">
+                <i class="fas fa-cogs"></i> How It Works Under the Hood
+              </div>
+              <ul class="mechanism-steps">
+                <li class="mechanism-step">
+                  <span class="step-num">01</span>
+                  <div class="step-content"><strong>Async Connection Pooling:</strong> Leverages asyncpg connection pools with PostgreSQL for microsecond latency transactional I/O.</div>
+                </li>
+                <li class="mechanism-step">
+                  <span class="step-num">02</span>
+                  <div class="step-content"><strong>Graph Domain Models:</strong> Structures tasks and habit loops as directed acyclic dependencies with strict Pydantic V2 validation.</div>
+                </li>
+                <li class="mechanism-step">
+                  <span class="step-num">03</span>
+                  <div class="step-content"><strong>Asynchronous Worker Queue:</strong> Background async workers calculate habit streaks, log time-series telemetry, and dispatch alerts.</div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="project-footer">
+              <div class="project-tags">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">FastAPI</span>
+                <span class="tech-tag">PostgreSQL</span>
+                <span class="tech-tag">Asyncpg</span>
+                <span class="tech-tag">Pydantic V2</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/ananta12-d/lifeos" target="_blank" rel="noopener noreferrer" class="neu-btn neu-btn-primary" style="padding:0.55rem 1.1rem; font-size:0.84rem;">
+                  <i class="fab fa-github"></i> View Repository
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 6: Simplified Trading Bot -->
+          <div class="project-card neu-glass-card glass-sheen" data-category="production">
+            <div>
+              <div class="project-card-header">
+                <span class="project-badge">FINANCIAL AUTOMATION</span>
+                <a href="https://github.com/ananta12-d/Simplified-Trading-Bot" target="_blank" rel="noopener noreferrer" class="project-github-link" title="View Source on GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+              <h3 class="project-title">Algorithmic Futures Trading Engine</h3>
+              <p class="project-pitch">
+                A robust Python automation application that places algorithmic orders on Binance Futures Testnet (USDT-M) featuring server-time synchronization, position sizing controls, and fault-tolerant error handling.
+              </p>
+            </div>
+
+            <!-- How It Works Mechanism Box -->
+            <div class="project-mechanism-box">
+              <div class="mechanism-title">
+                <i class="fas fa-cogs"></i> How It Works Under the Hood
+              </div>
+              <ul class="mechanism-steps">
+                <li class="mechanism-step">
+                  <span class="step-num">01</span>
+                  <div class="step-content"><strong>Server-Time Sync:</strong> Handshakes with Binance clock API to resolve timestamp drift errors before dispatching signed HMAC requests.</div>
+                </li>
+                <li class="mechanism-step">
+                  <span class="step-num">02</span>
+                  <div class="step-content"><strong>Notional Sizing Guard:</strong> Automatically calculates minimum order quantity thresholds (e.g. 0.002 BTC) to satisfy exchange notional constraints.</div>
+                </li>
+                <li class="mechanism-step">
+                  <span class="step-num">03</span>
+                  <div class="step-content"><strong>Exponential Retry & Logs:</strong> Structured event logging captures latency, order fill states, and API error codes with clean recovery.</div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="project-footer">
+              <div class="project-tags">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Binance API</span>
+                <span class="tech-tag">Algorithmic Orders</span>
+                <span class="tech-tag">WebSockets</span>
+                <span class="tech-tag">Risk Control</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/ananta12-d/Simplified-Trading-Bot" target="_blank" rel="noopener noreferrer" class="neu-btn neu-btn-primary" style="padding:0.55rem 1.1rem; font-size:0.84rem;">
+                  <i class="fab fa-github"></i> View Repository
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- HackIndia Project 1: AI for Lawyers -->
+          <div class="project-card neu-glass-card glass-sheen" data-category="hackindia ai">
+            <div>
+              <div class="project-card-header">
+                <span class="project-badge" style="color:#f59e0b; border-color:rgba(245,158,11,0.4); background:rgba(245,158,11,0.12);"><i class="fas fa-trophy"></i> HACKINDIA SUBMITTED • SOLO</span>
+                <a href="https://github.com/HackIndiaXYZ/ai-for-lawyers-hackathon-engineers-hub" target="_blank" rel="noopener noreferrer" class="project-github-link" title="View Submitted Repo on GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+              <h3 class="project-title">AI for Lawyers — Engineers HUB</h3>
+              <p class="project-pitch">
+                Submitted to <strong>⚖️ AI for Lawyers Hackathon 2026</strong>. An automated legal intelligence pipeline that extracts statutory clauses, performs semantic legal precedent searches, and synthesizes structured compliance briefs.
+              </p>
+            </div>
+
+            <div class="project-mechanism-box">
+              <div class="mechanism-title">
+                <i class="fas fa-cogs"></i> How It Works Under the Hood
+              </div>
+              <ul class="mechanism-steps">
+                <li class="mechanism-step">
+                  <span class="step-num">01</span>
+                  <div class="step-content"><strong>Legal Precedent Parsing:</strong> Ingests complex legal briefs and regulatory acts into structured token blocks.</div>
+                </li>
+                <li class="mechanism-step">
+                  <span class="step-num">02</span>
+                  <div class="step-content"><strong>Argument Vectorization:</strong> Dense embeddings map statutory provisions to discover similar case citations.</div>
+                </li>
+                <li class="mechanism-step">
+                  <span class="step-num">03</span>
+                  <div class="step-content"><strong>Automated Legal Briefing:</strong> Generates cited contract risk assessments and courtroom argument summaries under hackathon pressure.</div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="project-footer">
+              <div class="project-tags">
+                <span class="tech-tag">Legal AI</span>
+                <span class="tech-tag">HackIndia 2026</span>
+                <span class="tech-tag">Engineers HUB</span>
+                <span class="tech-tag">Solo Submission</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/HackIndiaXYZ/ai-for-lawyers-hackathon-engineers-hub" target="_blank" rel="noopener noreferrer" class="neu-btn neu-btn-primary" style="padding:0.55rem 1.1rem; font-size:0.84rem;">
+                  <i class="fab fa-github"></i> Submitted Repository
+                </a>
+                <a href="https://hackindia.org/profile/ananta_kishore_swain" target="_blank" rel="noopener noreferrer" class="neu-btn" style="padding:0.55rem 1.1rem; font-size:0.84rem;">
+                  <i class="fas fa-external-link-alt"></i> HackIndia
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- HackIndia Project 2: Buddy Visualizer -->
+          <div class="project-card neu-glass-card glass-sheen" data-category="hackindia ai">
+            <div>
+              <div class="project-card-header">
+                <span class="project-badge" style="color:#f59e0b; border-color:rgba(245,158,11,0.4); background:rgba(245,158,11,0.12);"><i class="fas fa-trophy"></i> HACKINDIA SUBMITTED • SOLO</span>
+                <a href="https://github.com/HackIndiaXYZ/ai-first-startup-hackathon-build-a-startup-using-ai-only-buddy-visualizer" target="_blank" rel="noopener noreferrer" class="project-github-link" title="View Submitted Repo on GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+              <h3 class="project-title">Buddy Visualizer — AI-First Startup</h3>
+              <p class="project-pitch">
+                Submitted to <strong>AI-First Startup Hackathon 2026</strong> ("Build a Startup Using AI Only"). A generative visualization platform architected entirely through AI agent workflows to turn abstract dataset relationships into interactive visual nodes.
+              </p>
+            </div>
+
+            <div class="project-mechanism-box">
+              <div class="mechanism-title">
+                <i class="fas fa-cogs"></i> How It Works Under the Hood
+              </div>
+              <ul class="mechanism-steps">
+                <li class="mechanism-step">
+                  <span class="step-num">01</span>
+                  <div class="step-content"><strong>Zero-Scaffold AI Generation:</strong> Program logic, schemas, and endpoints generated strictly through autonomous AI workflows.</div>
+                </li>
+                <li class="mechanism-step">
+                  <span class="step-num">02</span>
+                  <div class="step-content"><strong>Interactive Visualizer:</strong> Renders multi-dimensional relational graphs dynamically for user datasets.</div>
+                </li>
+                <li class="mechanism-step">
+                  <span class="step-num">03</span>
+                  <div class="step-content"><strong>Startup Pipeline:</strong> Shipped as a production-ready MVP on the HackIndia platform.</div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="project-footer">
+              <div class="project-tags">
+                <span class="tech-tag">AI-First</span>
+                <span class="tech-tag">Startup Hackathon</span>
+                <span class="tech-tag">Buddy Visualizer</span>
+                <span class="tech-tag">Solo Submission</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/HackIndiaXYZ/ai-first-startup-hackathon-build-a-startup-using-ai-only-buddy-visualizer" target="_blank" rel="noopener noreferrer" class="neu-btn neu-btn-primary" style="padding:0.55rem 1.1rem; font-size:0.84rem;">
+                  <i class="fab fa-github"></i> Submitted Repository
+                </a>
+                <a href="https://hackindia.org/profile/ananta_kishore_swain" target="_blank" rel="noopener noreferrer" class="neu-btn" style="padding:0.55rem 1.1rem; font-size:0.84rem;">
+                  <i class="fas fa-external-link-alt"></i> HackIndia
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- HackIndia Project 3: The Visualizors -->
+          <div class="project-card neu-glass-card glass-sheen" data-category="hackindia ai">
+            <div>
+              <div class="project-card-header">
+                <span class="project-badge" style="color:#f59e0b; border-color:rgba(245,158,11,0.4); background:rgba(245,158,11,0.12);"><i class="fas fa-trophy"></i> HACKINDIA SUBMITTED • TEAM OF 2</span>
+                <a href="https://github.com/HackIndiaXYZ/vibe-coding-hackathon-2026-the-visualizors" target="_blank" rel="noopener noreferrer" class="project-github-link" title="View Submitted Repo on GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+              <h3 class="project-title">The Visualizors — Vibe Coding 2026</h3>
+              <p class="project-pitch">
+                Submitted to <strong>Vibe Coding Hackathon 2026</strong>. Built in a high-tempo sprint with a team of 2, delivering fluid generative user interfaces and real-time interactive visual models designed around modern vibe-coding workflows.
+              </p>
+            </div>
+
+            <div class="project-mechanism-box">
+              <div class="mechanism-title">
+                <i class="fas fa-cogs"></i> How It Works Under the Hood
+              </div>
+              <ul class="mechanism-steps">
+                <li class="mechanism-step">
+                  <span class="step-num">01</span>
+                  <div class="step-content"><strong>Vibe Coding Pipeline:</strong> Rapid prototyping embracing fluid generative AI synthesis and reactive state binding.</div>
+                </li>
+                <li class="mechanism-step">
+                  <span class="step-num">02</span>
+                  <div class="step-content"><strong>Collaborative Sync:</strong> Co-developed and versioned cleanly across team members in a 48-hour sprint.</div>
+                </li>
+                <li class="mechanism-step">
+                  <span class="step-num">03</span>
+                  <div class="step-content"><strong>Interactive Visuals:</strong> Client-rendered canvas and DOM physics animations.</div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="project-footer">
+              <div class="project-tags">
+                <span class="tech-tag">Vibe Coding</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">The Visualizors</span>
+                <span class="tech-tag">Team of 2</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/HackIndiaXYZ/vibe-coding-hackathon-2026-the-visualizors" target="_blank" rel="noopener noreferrer" class="neu-btn neu-btn-primary" style="padding:0.55rem 1.1rem; font-size:0.84rem;">
+                  <i class="fab fa-github"></i> Submitted Repository
+                </a>
+                <a href="https://hackindia.org/profile/ananta_kishore_swain" target="_blank" rel="noopener noreferrer" class="neu-btn" style="padding:0.55rem 1.1rem; font-size:0.84rem;">
+                  <i class="fas fa-external-link-alt"></i> HackIndia
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         INTERACTIVE SYSTEM ARCHITECTURE VISUALIZER
+         ========================================== -->
+    <section id="architecture" class="section">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-tag">
+            <span class="neu-badge"><i class="fas fa-network-wired"></i> SYSTEM BLUEPRINT</span>
+          </div>
+          <h2>Interactive Enterprise AI & Telemetry Architecture</h2>
+          <p>
+            An interactive walk-through of the end-to-end telemetry and Hybrid RAG ecosystem designed at Insectika Biotech. Click on any pipeline component below to inspect implementation details, protocols, and production benchmarks.
+          </p>
+        </div>
+
+        <div class="neu-glass-card arch-visualizer-card">
+          
+          <!-- Flow Diagram -->
+          <div class="arch-flow-diagram" role="tablist">
+            
+            <div class="arch-node" data-node="telemetry" role="tab" tabindex="0">
+              <div class="arch-node-badge">STEP 01</div>
+              <div class="arch-node-icon"><i class="fas fa-satellite-dish"></i></div>
+              <div class="arch-node-name">Edge Ingestion</div>
+              <div class="arch-node-tech">MQTT • BLE • TCP</div>
+            </div>
+
+            <div class="arch-node" data-node="streaming" role="tab" tabindex="0">
+              <div class="arch-node-badge">STEP 02</div>
+              <div class="arch-node-icon"><i class="fas fa-stream"></i></div>
+              <div class="arch-node-name">Event Streaming</div>
+              <div class="arch-node-tech">Kafka • TBMQ • Redis</div>
+            </div>
+
+            <div class="arch-node" data-node="storage" role="tab" tabindex="0">
+              <div class="arch-node-badge">STEP 03</div>
+              <div class="arch-node-icon"><i class="fas fa-database"></i></div>
+              <div class="arch-node-name">Micro-Storage</div>
+              <div class="arch-node-tech">Cassandra • Postgres</div>
+            </div>
+
+            <div class="arch-node active" data-node="rag" role="tab" tabindex="0">
+              <div class="arch-node-badge">STEP 04</div>
+              <div class="arch-node-icon"><i class="fas fa-brain"></i></div>
+              <div class="arch-node-name">Hybrid RAG</div>
+              <div class="arch-node-tech">Qdrant • BM25 • RRF</div>
+            </div>
+
+            <div class="arch-node" data-node="llm" role="tab" tabindex="0">
+              <div class="arch-node-badge">STEP 05</div>
+              <div class="arch-node-icon"><i class="fas fa-robot"></i></div>
+              <div class="arch-node-name">Llama 3.2 Agent</div>
+              <div class="arch-node-tech">Self-Hosted • Airgapped</div>
+            </div>
+
+            <div class="arch-node" data-node="delivery" role="tab" tabindex="0">
+              <div class="arch-node-badge">STEP 06</div>
+              <div class="arch-node-icon"><i class="fas fa-shield-alt"></i></div>
+              <div class="arch-node-name">Zero-Trust & SSE</div>
+              <div class="arch-node-tech">&lt;50ms • WireGuard</div>
+            </div>
+
+          </div>
+
+          <!-- Active Node Inspector Drawer -->
+          <div class="arch-details-drawer">
+            <div class="arch-details-header">
+              <div class="arch-details-title" id="arch-active-title">
+                <i class="fas fa-brain"></i> Hybrid RAG (Reciprocal Rank Fusion)
+              </div>
+              <span class="neu-badge" id="arch-active-cat">AI Retrieval & Context</span>
+            </div>
+
+            <p class="arch-details-content" id="arch-active-desc">
+              Engineered a state-of-the-art Hybrid Retrieval-Augmented Generation system. Fuses Qdrant Dense Vector Embeddings with Sparse BM25 keyword search using Reciprocal Rank Fusion (RRF), eliminating hallucinations and maximizing technical precision.
+            </p>
+
+            <div class="arch-details-metrics" id="arch-active-metrics">
+              <div class="arch-metric-pill"><strong>Vector Store:</strong> Qdrant Vector DB</div>
+              <div class="arch-metric-pill"><strong>Sparse Retrieval:</strong> BM25 Token Match</div>
+              <div class="arch-metric-pill"><strong>Algorithm:</strong> Reciprocal Rank Fusion (RRF)</div>
+            </div>
+
+            <div class="timeline-tags" id="arch-active-tech" style="border:none; padding:0; margin-top:0.5rem;">
+              <span class="tech-tag">Qdrant</span>
+              <span class="tech-tag">Dense Embeddings</span>
+              <span class="tech-tag">BM25</span>
+              <span class="tech-tag">RRF</span>
+              <span class="tech-tag">LangChain</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         EXPERIENCE TIMELINE
+         ========================================== -->
+    <section id="experience" class="section">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-tag">
+            <span class="neu-badge"><i class="fas fa-briefcase"></i> CAREER TRAJECTORY</span>
+          </div>
+          <h2>Professional Experience</h2>
+          <p>
+            Demonstrated track record of delivering resilient backend systems, real-time distributed data pipelines, and scalable enterprise AI agents.
+          </p>
+        </div>
+
+        <div class="experience-timeline">
+          
+          <!-- Experience 1: Insectika Biotech (Senior/Current Role) -->
+          <div class="timeline-item">
+            <div class="timeline-node-pin"></div>
+            <div class="timeline-card neu-glass-card glass-sheen">
+              
+              <div class="timeline-header">
+                <div class="timeline-role-info">
+                  <h3>Software Engineer - Applied AI, MLOps & Backend Architecture</h3>
+                  <div class="timeline-company">Insectika Biotech</div>
+                </div>
+                <div class="timeline-meta">
+                  <span class="timeline-badge-duration"><i class="far fa-calendar-alt"></i> March 2026 – Present (9 months)</span>
+                  <span class="timeline-location"><i class="fas fa-map-marker-alt"></i> Bhubaneswar, Odisha, India</span>
+                </div>
+              </div>
+
+              <ul class="timeline-points">
+                <li class="timeline-point">
+                  <strong>High-Concurrency Telemetry & Fleet Management:</strong> Architected a high-concurrency micro-storage and IoT telemetry platform integrated with deterministic Generative AI, enabling predictive enterprise fleet management.
+                </li>
+                <li class="timeline-point">
+                  <strong>Database Scaling to 1M+ msg/sec:</strong> Scaled telemetry ingestion to 1M+ messages/sec by migrating from PostgreSQL to Apache Cassandra, completely eliminating database lock contention during hyper-scale events.
+                </li>
+                <li class="timeline-point">
+                  <strong>Distributed Streaming Backbone:</strong> Built a distributed event-streaming backbone using Apache Kafka, TBMQ, and Redis Pub/Sub, enabling parallel processing across millions of edge devices.
+                </li>
+                <li class="timeline-point">
+                  <strong>5× Storage Efficiency:</strong> Achieved 5× storage efficiency through optimized time-series data isolation, significantly reducing cloud infrastructure costs.
+                </li>
+                <li class="timeline-point">
+                  <strong>Self-Hosted Llama 3.2 Enterprise Agent:</strong> Developed a secure, self-hosted enterprise AI agent powered by Llama 3.2 (3B), eliminating recurring third-party API expenses while maintaining full data sovereignty.
+                </li>
+                <li class="timeline-point">
+                  <strong>Hybrid RAG Pipeline:</strong> Engineered a Hybrid RAG system using Qdrant, Dense Embeddings, Sparse BM25 Retrieval, and Reciprocal Rank Fusion (RRF), reducing hallucinations and improving technical-document accuracy.
+                </li>
+                <li class="timeline-point">
+                  <strong>Sub-50ms Latency Streaming:</strong> Reduced AI response latency to &lt;50ms through asynchronous SSE streaming and Redis-based semantic caching.
+                </li>
+                <li class="timeline-point">
+                  <strong>99.9% Uptime via CPU Governance:</strong> Maintained 99.9% API uptime by implementing Docker CPU governance, stabilizing LLM workloads and preventing resource spikes.
+                </li>
+                <li class="timeline-point">
+                  <strong>API Security & Prompt Injection Defense:</strong> Strengthened platform security with a multi-layer API firewall featuring rate limiting and prompt injection protection aligned with SOC2/ISO 27001 practices.
+                </li>
+                <li class="timeline-point">
+                  <strong>Dual-Delete Synchronization:</strong> Built a Dual-Delete Synchronization protocol across PostgreSQL and Elasticsearch, ensuring complete data consistency and eliminating orphaned records ("ghost data").
+                </li>
+              </ul>
+
+              <div class="timeline-tags">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">FastAPI</span>
+                <span class="tech-tag">Docker</span>
+                <span class="tech-tag">Apache Cassandra</span>
+                <span class="tech-tag">Apache Kafka</span>
+                <span class="tech-tag">TBMQ</span>
+                <span class="tech-tag">Redis Pub/Sub</span>
+                <span class="tech-tag">Qdrant Vector DB</span>
+                <span class="tech-tag">Llama 3.2 (3B)</span>
+                <span class="tech-tag">Hybrid RAG</span>
+                <span class="tech-tag">SSE Streaming</span>
+                <span class="tech-tag">Elasticsearch</span>
+                <span class="tech-tag">SOC2/ISO 27001</span>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Experience 2: Insectika Biotech (Embedded Role) -->
+          <div class="timeline-item">
+            <div class="timeline-node-pin"></div>
+            <div class="timeline-card neu-glass-card glass-sheen">
+              
+              <div class="timeline-header">
+                <div class="timeline-role-info">
+                  <h3>Embedded Software Engineer - Edge Data & Infrastructure</h3>
+                  <div class="timeline-company">Insectika Biotech (Edge Computing & AI Systems)</div>
+                </div>
+                <div class="timeline-meta">
+                  <span class="timeline-badge-duration"><i class="far fa-calendar-alt"></i> October 2025 – February 2026 (5 months)</span>
+                  <span class="timeline-location"><i class="fas fa-map-marker-alt"></i> Bhubaneswar, Odisha, India</span>
+                </div>
+              </div>
+
+              <ul class="timeline-points">
+                <li class="timeline-point">
+                  <strong>Visual Flow Editor Rule Engine:</strong> Built a custom visual flow editor inspired by Node-RED in under one month, delivering the core rule-engine framework for enterprise automation workflows.
+                </li>
+                <li class="timeline-point">
+                  <strong>DAG Architecture Prototyping:</strong> Leveraged Generative AI to accelerate prototyping of complex Directed Acyclic Graph (DAG) architectures, significantly reducing development cycles and improving workflow design efficiency.
+                </li>
+                <li class="timeline-point">
+                  <strong>Live MQTT & UDP Routing:</strong> Integrated visual workflow builders with live MQTT and TCP/UDP routing engines, enabling dynamic edge-device orchestration and real-time data processing.
+                </li>
+                <li class="timeline-point">
+                  <strong>WireGuard VPN Management Platform:</strong> Engineered and launched a scalable VPN management platform using FastAPI, PostgreSQL, and WireGuard in six weeks, providing secure browser-based SSH, SFTP, and reverse-proxy access for 500+ concurrent users.
+                </li>
+                <li class="timeline-point">
+                  <strong>Flutter BLE Mobile Application:</strong> Developed a high-performance BLE mobile application with Flutter, enabling real-time device discovery, advertisement packet analysis, and environmental telemetry visualization.
+                </li>
+                <li class="timeline-point">
+                  <strong>Sensor Calibration & Technician Mode:</strong> Implemented sensor calibration workflows and a secure Technician Maintenance Mode, improving remote diagnostics, troubleshooting, and field-service operations.
+                </li>
+              </ul>
+
+              <div class="timeline-tags">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">FastAPI</span>
+                <span class="tech-tag">PostgreSQL</span>
+                <span class="tech-tag">WireGuard</span>
+                <span class="tech-tag">WebSockets</span>
+                <span class="tech-tag">MQTT</span>
+                <span class="tech-tag">Flutter</span>
+                <span class="tech-tag">BLE</span>
+                <span class="tech-tag">Vue.js</span>
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">DAG Architectures</span>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Experience 3: Creative Techno College -->
+          <div class="timeline-item">
+            <div class="timeline-node-pin"></div>
+            <div class="timeline-card neu-glass-card">
+              <div class="timeline-header">
+                <div class="timeline-role-info">
+                  <h3>Lab Assistant & Project Guide of Technocrat Team</h3>
+                  <div class="timeline-company">Creative Techno College</div>
+                </div>
+                <div class="timeline-meta">
+                  <span class="timeline-badge-duration"><i class="far fa-calendar-alt"></i> July 2025 – September 2025 (3 months)</span>
+                  <span class="timeline-location"><i class="fas fa-map-marker-alt"></i> Angul, Odisha, India</span>
+                </div>
+              </div>
+              <p class="timeline-point" style="margin-bottom:1rem;">
+                Guided undergraduate students on computing projects, data structures, backend engineering setups, and lab infrastructure management.
+              </p>
+              <div class="timeline-tags">
+                <span class="tech-tag">Mentorship</span>
+                <span class="tech-tag">Systems Lab</span>
+                <span class="tech-tag">Software Development</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Experience 4: Static Consultancy -->
+          <div class="timeline-item">
+            <div class="timeline-node-pin"></div>
+            <div class="timeline-card neu-glass-card">
+              <div class="timeline-header">
+                <div class="timeline-role-info">
+                  <h3>Hybrid App Developer</h3>
+                  <div class="timeline-company">Static Consultancy</div>
+                </div>
+                <div class="timeline-meta">
+                  <span class="timeline-badge-duration"><i class="far fa-calendar-alt"></i> July 2024 – January 2025 (7 months)</span>
+                  <span class="timeline-location"><i class="fas fa-map-marker-alt"></i> Bhubaneswar, Odisha, India</span>
+                </div>
+              </div>
+              <p class="timeline-point" style="margin-bottom:1rem;">
+                Worked as an Android & hybrid app developer using Flutter, ensuring high performance across devices. Developed a Flutter-based banking application user interface for an enterprise client with secure authentication flows.
+              </p>
+              <div class="timeline-tags">
+                <span class="tech-tag">Flutter</span>
+                <span class="tech-tag">Dart</span>
+                <span class="tech-tag">Banking UI</span>
+                <span class="tech-tag">Mobile Security</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Experience 5: Samnic Tech -->
+          <div class="timeline-item">
+            <div class="timeline-node-pin"></div>
+            <div class="timeline-card neu-glass-card">
+              <div class="timeline-header">
+                <div class="timeline-role-info">
+                  <h3>Application Developer</h3>
+                  <div class="timeline-company">Samnic Tech</div>
+                </div>
+                <div class="timeline-meta">
+                  <span class="timeline-badge-duration"><i class="far fa-calendar-alt"></i> January 2023 – March 2023 (3 months)</span>
+                  <span class="timeline-location"><i class="fas fa-laptop-house"></i> Remote</span>
+                </div>
+              </div>
+              <p class="timeline-point" style="margin-bottom:1rem;">
+                Contributed to frontend and backend feature modules, RESTful API integrations, and client application maintenance.
+              </p>
+              <div class="timeline-tags">
+                <span class="tech-tag">Full-Stack</span>
+                <span class="tech-tag">REST APIs</span>
+                <span class="tech-tag">JavaScript</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SKILLS & COMPETENCIES MATRIX
+         ========================================== -->
+    <section id="skills" class="section">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-tag">
+            <span class="neu-badge"><i class="fas fa-cubes"></i> CORE COMPETENCIES</span>
+          </div>
+          <h2>Skills & Technical Proficiency</h2>
+          <p>
+            Filter by domain to explore the languages, frameworks, vector databases, and architectures I leverage daily in production.
+          </p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="skills-filter-tabs">
+          <button class="filter-tab-btn active" data-filter="all">All Disciplines</button>
+          <button class="filter-tab-btn" data-filter="ai">Applied AI & RAG</button>
+          <button class="filter-tab-btn" data-filter="backend">Backend & APIs</button>
+          <button class="filter-tab-btn" data-filter="data">Streaming & DBs</button>
+          <button class="filter-tab-btn" data-filter="security">Security & DevOps</button>
+          <button class="filter-tab-btn" data-filter="edge">Edge & Mobile</button>
+        </div>
+
+        <div class="skills-grid">
+          
+          <!-- Skill: Hybrid RAG -->
+          <div class="skill-card neu-glass-card" data-category="ai">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap"><i class="fas fa-brain"></i></div>
+              <span class="skill-level-badge">Specialist</span>
+            </div>
+            <div class="skill-name">Hybrid RAG (Dense + BM25)</div>
+            <p class="skill-desc">Qdrant vector stores, dense embedding retrieval, sparse BM25 indexing, and Reciprocal Rank Fusion (RRF) for hallucination minimization.</p>
+            <div class="skill-progress-bar"><div class="skill-progress-fill" style="width: 95%;"></div></div>
+          </div>
+
+          <!-- Skill: Self-Hosted LLMs -->
+          <div class="skill-card neu-glass-card" data-category="ai">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap"><i class="fas fa-microchip"></i></div>
+              <span class="skill-level-badge">Advanced</span>
+            </div>
+            <div class="skill-name">Llama 3.2 & LangChain</div>
+            <p class="skill-desc">Self-hosted local enterprise inference (Llama 3.2 3B), LangChain prompt pipelines, semantic caching, and asynchronous SSE streaming.</p>
+            <div class="skill-progress-bar"><div class="skill-progress-fill" style="width: 92%;"></div></div>
+          </div>
+
+          <!-- Skill: Python & FastAPI -->
+          <div class="skill-card neu-glass-card" data-category="backend">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap"><i class="fab fa-python"></i></div>
+              <span class="skill-level-badge">Expert</span>
+            </div>
+            <div class="skill-name">Python & FastAPI</div>
+            <p class="skill-desc">Asynchronous microservices, high-throughput REST endpoints, WebSocket telemetry channels, Pydantic data schemas, and async workers.</p>
+            <div class="skill-progress-bar"><div class="skill-progress-fill" style="width: 98%;"></div></div>
+          </div>
+
+          <!-- Skill: Apache Cassandra & Kafka -->
+          <div class="skill-card neu-glass-card" data-category="data">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap"><i class="fas fa-database"></i></div>
+              <span class="skill-level-badge">Production-Grade</span>
+            </div>
+            <div class="skill-name">Cassandra & Kafka (1M+ msg/s)</div>
+            <p class="skill-desc">High-velocity time-series ingestion, partition clustering, message queuing, distributed consumers, and zero lock contention.</p>
+            <div class="skill-progress-bar"><div class="skill-progress-fill" style="width: 90%;"></div></div>
+          </div>
+
+          <!-- Skill: WireGuard & Zero-Trust -->
+          <div class="skill-card neu-glass-card" data-category="security">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap"><i class="fas fa-shield-alt"></i></div>
+              <span class="skill-level-badge">Specialist</span>
+            </div>
+            <div class="skill-name">WireGuard & Zero-Trust</div>
+            <p class="skill-desc">Scalable VPN platform architecture, browser-based SSH/SFTP access for 500+ users, reverse-proxy tunnels, and cryptographic access.</p>
+            <div class="skill-progress-bar"><div class="skill-progress-fill" style="width: 88%;"></div></div>
+          </div>
+
+          <!-- Skill: Docker & CPU Governance -->
+          <div class="skill-card neu-glass-card" data-category="security backend">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap"><i class="fab fa-docker"></i></div>
+              <span class="skill-level-badge">Advanced</span>
+            </div>
+            <div class="skill-name">Docker CPU Governance</div>
+            <p class="skill-desc">Container isolation, cgroup resource throttling, stabilizing heavy LLM vector workloads to maintain 99.9% API uptime SLAs.</p>
+            <div class="skill-progress-bar"><div class="skill-progress-fill" style="width: 92%;"></div></div>
+          </div>
+
+          <!-- Skill: MQTT & TBMQ -->
+          <div class="skill-card neu-glass-card" data-category="edge data">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap"><i class="fas fa-broadcast-tower"></i></div>
+              <span class="skill-level-badge">Advanced</span>
+            </div>
+            <div class="skill-name">MQTT, TBMQ & IoT Telemetry</div>
+            <p class="skill-desc">Industrial edge IoT message brokering, real-time TCP/UDP routing, sensor telemetry ingestion, and rule-engine DAG dispatching.</p>
+            <div class="skill-progress-bar"><div class="skill-progress-fill" style="width: 88%;"></div></div>
+          </div>
+
+          <!-- Skill: Flutter & BLE -->
+          <div class="skill-card neu-glass-card" data-category="edge">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap"><i class="fab fa-google"></i></div>
+              <span class="skill-level-badge">Proficient</span>
+            </div>
+            <div class="skill-name">Flutter & Bluetooth Low Energy (BLE)</div>
+            <p class="skill-desc">Real-time device discovery, advertisement packet decoding, environmental visualization, and technician maintenance workflows.</p>
+            <div class="skill-progress-bar"><div class="skill-progress-fill" style="width: 85%;"></div></div>
+          </div>
+
+          <!-- Skill: Node.js, Express & Vue.js -->
+          <div class="skill-card neu-glass-card" data-category="backend edge">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap"><i class="fab fa-node-js"></i></div>
+              <span class="skill-level-badge">Certified</span>
+            </div>
+            <div class="skill-name">Node.js, Express & Vue.js</div>
+            <p class="skill-desc">Visual DAG flow editor rule-engine frontend, full-stack API integration, reactive interfaces, and real-time event loops.</p>
+            <div class="skill-progress-bar"><div class="skill-progress-fill" style="width: 86%;"></div></div>
+          </div>
+
+          <!-- Skill: SOC2 / Prompt Security -->
+          <div class="skill-card neu-glass-card" data-category="security ai">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap"><i class="fas fa-user-shield"></i></div>
+              <span class="skill-level-badge">Advanced</span>
+            </div>
+            <div class="skill-name">Prompt Injection & API Firewalls</div>
+            <p class="skill-desc">Multi-layer API firewalls, prompt injection sanitization, token rate-limiting, and security governance aligned with SOC2/ISO 27001.</p>
+            <div class="skill-progress-bar"><div class="skill-progress-fill" style="width: 90%;"></div></div>
+          </div>
+
+          <!-- Skill: Redis & Semantic Caching -->
+          <div class="skill-card neu-glass-card" data-category="backend data">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap"><i class="fas fa-memory"></i></div>
+              <span class="skill-level-badge">Advanced</span>
+            </div>
+            <div class="skill-name">Redis Pub/Sub & Semantic Cache</div>
+            <p class="skill-desc">Sub-millisecond query caching, semantic prompt embedding caching to reduce LLM calls, and distributed pub/sub channels.</p>
+            <div class="skill-progress-bar"><div class="skill-progress-fill" style="width: 94%;"></div></div>
+          </div>
+
+          <!-- Skill: Google Gemini & AI Enablement -->
+          <div class="skill-card neu-glass-card" data-category="ai">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap"><i class="fas fa-sparkles"></i></div>
+              <span class="skill-level-badge">Certified</span>
+            </div>
+            <div class="skill-name">Google Gemini & Prompt Engineering</div>
+            <p class="skill-desc">AI enablement, creative prompt structuring, structured JSON schema generation, and multi-modal AI integration.</p>
+            <div class="skill-progress-bar"><div class="skill-progress-fill" style="width: 92%;"></div></div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         INTERACTIVE CYBER TERMINAL PLAYGROUND
+         ========================================== -->
+    <section id="terminal" class="section">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-tag">
+            <span class="neu-badge"><i class="fas fa-terminal"></i> LIVE PLAYGROUND</span>
+          </div>
+          <h2>Interactive Command Line Interface</h2>
+          <p>
+            Explore my portfolio directly through an authentic cyber shell. Type commands below or click the quick action chips.
+          </p>
+        </div>
+
+        <div class="terminal-card neu-glass-card">
+          
+          <div class="terminal-top-bar">
+            <div class="terminal-window-buttons">
+              <div class="terminal-btn-dot terminal-btn-red"></div>
+              <div class="terminal-btn-dot terminal-btn-yellow"></div>
+              <div class="terminal-btn-dot terminal-btn-green"></div>
+            </div>
+
+            <div class="terminal-title-text">
+              <i class="fas fa-server"></i> ananta@aks-ai-backbone: ~ (zsh)
+            </div>
+
+            <div class="terminal-quick-chips">
+              <button class="term-chip" data-cmd="about">about</button>
+              <button class="term-chip" data-cmd="projects">projects</button>
+              <button class="term-chip" data-cmd="skills">skills</button>
+              <button class="term-chip" data-cmd="rag">rag</button>
+              <button class="term-chip" data-cmd="metrics">metrics</button>
+              <button class="term-chip" data-cmd="github">github</button>
+              <button class="term-chip" data-cmd="resume">resume</button>
+              <button class="term-chip" data-cmd="clear">clear</button>
+            </div>
+          </div>
+
+          <div class="terminal-body" id="terminal-body">
+            <div class="terminal-output-container" id="terminal-output">
+              <div class="term-line">
+                <span style="color:#06b6d4;">[ANANTA KISHORE SWAIN AI SYSTEM CONSOLE v2.4]</span>
+              </div>
+              <div class="term-line">
+                Type <span class="term-response-highlight">help</span> to list commands, or try <span class="term-response-highlight">projects</span>, <span class="term-response-highlight">skills</span>, <span class="term-response-highlight">rag</span>, <span class="term-response-highlight">github</span>, or <span class="term-response-highlight">resume</span>.
+              </div>
+            </div>
+
+            <div class="terminal-input-row">
+              <span class="term-prompt">ananta@aks-ai:~$</span>
+              <input type="text" id="terminal-cli-input" placeholder="Type a command (e.g. 'projects', 'rag', 'github')..." autocomplete="off" spellcheck="false">
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         EDUCATION, CERTIFICATIONS & HONORS
+         ========================================== -->
+    <section id="education" class="section">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-tag">
+            <span class="neu-badge"><i class="fas fa-graduation-cap"></i> CREDENTIALS</span>
+          </div>
+          <h2>Education & Certifications</h2>
+          <p>
+            Academic foundation in Artificial Intelligence combined with recognized industry certifications.
+          </p>
+        </div>
+
+        <div class="edu-cert-grid">
+          
+          <!-- Column 1: Education & Honors -->
+          <div class="edu-column">
+            <h3><i class="fas fa-university" style="color:var(--accent-cyan);"></i> Higher Education</h3>
+
+            <div class="edu-card neu-glass-card glass-sheen">
+              <div class="neu-badge" style="margin-bottom:0.4rem; font-size:0.7rem; color:var(--accent-emerald); border-color:var(--accent-emerald);">
+                <span class="status-dot"></span> PURSUING MASTER'S
+              </div>
+              <div class="edu-degree">Master of Computer Applications (MCA)</div>
+              <div class="edu-institution">Manipal University Jaipur</div>
+              <div class="edu-year"><i class="far fa-calendar-alt"></i> Software Development Engineering & Artificial Intelligence • Pursuing (Feb 2026 – Present)</div>
+              <p style="font-size:0.85rem; color:var(--text-secondary); margin-top:0.6rem;">
+                Advanced focus on Deep Learning, Vector Spaces, High-Performance Distributed Computing, and Agentic AI Architectures.
+              </p>
+            </div>
+
+            <div class="edu-card neu-glass-card">
+              <div class="neu-badge" style="margin-bottom:0.4rem; font-size:0.7rem;">BACHELOR'S DEGREE</div>
+              <div class="edu-degree">Bachelor of Computer Application (BCA)</div>
+              <div class="edu-institution">Creative Techno College, Angul</div>
+              <div class="edu-year"><i class="far fa-calendar-alt"></i> October 2022 – May 2025</div>
+              <p style="font-size:0.85rem; color:var(--text-secondary); margin-top:0.6rem;">
+                Core Computer Science foundations, Data Structures, Relational Database Design, and Software Engineering methodologies.
+              </p>
+            </div>
+
+            <h3 style="margin-top:2rem;"><i class="fas fa-trophy" style="color:var(--accent-amber);"></i> Honors & Awards</h3>
+
+            <div class="award-badge-card neu-glass-card" style="border-color:rgba(6,182,212,0.4); background:linear-gradient(135deg, rgba(6,182,212,0.1), transparent);">
+              <div class="award-icon"><i class="fas fa-trophy" style="color:var(--accent-cyan);"></i></div>
+              <div>
+                <strong style="color:var(--text-primary); font-size:0.95rem;">Rank #77 Nationally — HackIndia</strong>
+                <p style="font-size:0.8rem; color:var(--text-secondary); margin-top:0.2rem;">
+                  Ranked #77 across India on HackIndia for competitive AI hackathon submissions, 4 shipped repositories, and verified engineering skills.
+                </p>
+              </div>
+            </div>
+
+            <div class="award-badge-card neu-glass-card">
+              <div class="award-icon"><i class="fas fa-award"></i></div>
+              <div>
+                <strong style="color:var(--text-primary); font-size:0.95rem;">Selected for Cognizant GenC Analyst Trainee</strong>
+                <p style="font-size:0.8rem; color:var(--text-secondary); margin-top:0.2rem;">
+                  Recognized for high analytical problem-solving aptitude and technical evaluation performance.
+                </p>
+              </div>
+            </div>
+
+            <div class="award-badge-card neu-glass-card">
+              <div class="award-icon"><i class="fas fa-medal"></i></div>
+              <div>
+                <strong style="color:var(--text-primary); font-size:0.95rem;">Best Academic Performer of the Year (2022 – 2025)</strong>
+                <p style="font-size:0.8rem; color:var(--text-secondary); margin-top:0.2rem;">
+                  Awarded for consistent top academic distinction across the BCA curriculum.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Column 2: Certifications -->
+          <div class="cert-column">
+            <h3><i class="fas fa-certificate" style="color:var(--accent-emerald);"></i> Industry Certifications</h3>
+
+            <div class="cert-card neu-glass-card">
+              <div class="cert-card-header">
+                <div class="cert-icon"><i class="fas fa-check-circle"></i></div>
+                <div>
+                  <div class="cert-title">SAP Certified Development Associate</div>
+                  <div style="font-size:0.8rem; color:var(--accent-cyan); margin-top:0.2rem;">SMP Hybrid and Native Mobile Application Developer</div>
+                  <p style="font-size:0.82rem; color:var(--text-secondary); margin-top:0.35rem;">
+                    Enterprise mobile application engineering, offline data synchronization, and native device orchestration.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="cert-card neu-glass-card">
+              <div class="cert-card-header">
+                <div class="cert-icon"><i class="fas fa-check-circle"></i></div>
+                <div>
+                  <div class="cert-title">Developing LLM Applications with LangChain</div>
+                  <div style="font-size:0.8rem; color:var(--accent-cyan); margin-top:0.2rem;">LangChain & Vector Architecture</div>
+                  <p style="font-size:0.82rem; color:var(--text-secondary); margin-top:0.35rem;">
+                    Context injection, chain of thought, document loaders, vector store retrievers, and agent memory management.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="cert-card neu-glass-card">
+              <div class="cert-card-header">
+                <div class="cert-icon"><i class="fas fa-check-circle"></i></div>
+                <div>
+                  <div class="cert-title">Developing Back-End Apps with Node.js and Express</div>
+                  <div style="font-size:0.8rem; color:var(--accent-cyan); margin-top:0.2rem;">Backend Systems Specialization</div>
+                  <p style="font-size:0.82rem; color:var(--text-secondary); margin-top:0.35rem;">
+                    Event-driven servers, asynchronous middleware, RESTful API architecture, and database integrations.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="cert-card neu-glass-card">
+              <div class="cert-card-header">
+                <div class="cert-icon"><i class="fas fa-check-circle"></i></div>
+                <div>
+                  <div class="cert-title">Foundations of AI and Machine Learning</div>
+                  <div style="font-size:0.8rem; color:var(--accent-cyan); margin-top:0.2rem;">Machine Learning Core</div>
+                  <p style="font-size:0.82rem; color:var(--text-secondary); margin-top:0.35rem;">
+                    Statistical modeling, classification, regression, model evaluation metrics, and neural network foundations.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="cert-card neu-glass-card">
+              <div class="cert-card-header">
+                <div class="cert-icon"><i class="fas fa-check-circle"></i></div>
+                <div>
+                  <div class="cert-title">Generative AI: Prompt Engineering Basics</div>
+                  <div style="font-size:0.8rem; color:var(--accent-cyan); margin-top:0.2rem;">AI Enablement & Safety</div>
+                  <p style="font-size:0.82rem; color:var(--text-secondary); margin-top:0.35rem;">
+                    Prompt decomposition, zero-shot and few-shot reasoning, hallucination reduction, and safety boundaries.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         CONTACT & INQUIRY SECTION
+         ========================================== -->
+    <section id="contact" class="section">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-tag">
+            <span class="neu-badge"><i class="fas fa-envelope-open-text"></i> GET IN TOUCH</span>
+          </div>
+          <h2>Let's Build Resilient AI & Backend Systems</h2>
+          <p>
+            Whether you are looking to hire a Software Engineer for Applied AI & MLOps, need to scale telemetry ingestion to millions of messages, or want to collaborate on open-source code, I'm ready to connect.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          
+          <!-- Contact Channels Column -->
+          <div class="contact-info-column">
+            
+            <div class="contact-item-card neu-glass-card">
+              <div class="contact-item-left">
+                <div class="contact-item-icon"><i class="fas fa-envelope"></i></div>
+                <div>
+                  <div class="contact-item-label">Direct Email</div>
+                  <div class="contact-item-value">opbitu855@gmail.com</div>
+                </div>
+              </div>
+              <button class="neu-btn contact-copy-btn copy-trigger" data-copy="opbitu855@gmail.com" title="Copy Email">
+                <i class="fas fa-copy"></i> Copy
+              </button>
+            </div>
+
+            <div class="contact-item-card neu-glass-card">
+              <div class="contact-item-left">
+                <div class="contact-item-icon"><i class="fas fa-phone-alt"></i></div>
+                <div>
+                  <div class="contact-item-label">Mobile Phone</div>
+                  <div class="contact-item-value">+91 9090078348</div>
+                </div>
+              </div>
+              <button class="neu-btn contact-copy-btn copy-trigger" data-copy="9090078348" title="Copy Phone">
+                <i class="fas fa-copy"></i> Copy
+              </button>
+            </div>
+
+            <div class="contact-item-card neu-glass-card">
+              <div class="contact-item-left">
+                <div class="contact-item-icon"><i class="fab fa-github"></i></div>
+                <div>
+                  <div class="contact-item-label">GitHub Profile</div>
+                  <div class="contact-item-value">github.com/ananta12-d</div>
+                </div>
+              </div>
+              <a href="https://github.com/ananta12-d" target="_blank" rel="noopener noreferrer" class="neu-btn contact-copy-btn">
+                <i class="fas fa-external-link-alt"></i> Visit
+              </a>
+            </div>
+
+            <div class="contact-item-card neu-glass-card">
+              <div class="contact-item-left">
+                <div class="contact-item-icon"><i class="fab fa-linkedin-in"></i></div>
+                <div>
+                  <div class="contact-item-label">LinkedIn</div>
+                  <div class="contact-item-value">ananta-kishore-swain</div>
+                </div>
+              </div>
+              <a href="https://www.linkedin.com/in/ananta-kishore-swain-6282472bb" target="_blank" rel="noopener noreferrer" class="neu-btn contact-copy-btn">
+                <i class="fas fa-external-link-alt"></i> Connect
+              </a>
+            </div>
+
+            <div class="contact-item-card neu-glass-card">
+              <div class="contact-item-left">
+                <div class="contact-item-icon"><i class="fas fa-terminal"></i></div>
+                <div>
+                  <div class="contact-item-label">HackIndia Profile</div>
+                  <div class="contact-item-value">ananta_kishore_swain</div>
+                </div>
+              </div>
+              <a href="https://hackindia.org/profile/ananta_kishore_swain" target="_blank" rel="noopener noreferrer" class="neu-btn contact-copy-btn">
+                <i class="fas fa-external-link-alt"></i> View
+              </a>
+            </div>
+
+            <div class="contact-item-card neu-glass-card">
+              <div class="contact-item-left">
+                <div class="contact-item-icon"><i class="fas fa-code"></i></div>
+                <div>
+                  <div class="contact-item-label">C# Corner Community</div>
+                  <div class="contact-item-value">ananta-kishore-swain</div>
+                </div>
+              </div>
+              <a href="https://www.c-sharpcorner.com/members/ananta-kishore-swain" target="_blank" rel="noopener noreferrer" class="neu-btn contact-copy-btn">
+                <i class="fas fa-external-link-alt"></i> View
+              </a>
+            </div>
+
+            <div class="contact-item-card neu-glass-card">
+              <div class="contact-item-left">
+                <div class="contact-item-icon"><i class="fas fa-map-marker-alt"></i></div>
+                <div>
+                  <div class="contact-item-label">Locations</div>
+                  <div class="contact-item-value">Bhubaneswar & Angul, Odisha, India</div>
+                </div>
+              </div>
+              <span class="neu-badge" style="font-size:0.75rem;">Open to Relocation / Remote</span>
+            </div>
+
+            <!-- Resume Download Box -->
+            <div class="neu-glass-card" style="padding:1.5rem; text-align:center; background:linear-gradient(135deg, rgba(6,182,212,0.1), transparent);">
+              <i class="fas fa-file-pdf" style="font-size:2rem; color:var(--accent-cyan); margin-bottom:0.6rem;"></i>
+              <h4 style="font-family:var(--font-heading); margin-bottom:0.25rem;">Looking for my Official Resume?</h4>
+              <p style="font-size:0.84rem; color:var(--text-secondary); margin-bottom:1rem;">
+                Download the verified ATS-optimized PDF resume directly to your device.
+              </p>
+              <a href="Ananta_Kishore_Swain_Resume.pdf" download="Ananta_Kishore_Swain_Resume.pdf" class="neu-btn neu-btn-primary" style="width:100%;">
+                <i class="fas fa-download"></i> Download Ananta_Kishore_Swain_Resume.pdf
+              </a>
+            </div>
+
+          </div>
+
+          <!-- Message Form Column -->
+          <div class="contact-form-card neu-glass-card glass-sheen">
+            <h3>Send a Direct Message</h3>
+            <p>Leave your details and proposal below to initiate a conversation.</p>
+
+            <form id="contact-form">
+              <div class="form-group">
+                <label for="form-name" class="form-label">Your Name / Organization</label>
+                <input type="text" id="form-name" class="form-input" placeholder="e.g. Sarah Connor / Anthropic" required>
+              </div>
+
+              <div class="form-group">
+                <label for="form-email" class="form-label">Your Email</label>
+                <input type="email" id="form-email" class="form-input" placeholder="e.g. sarah@example.com" required>
+              </div>
+
+              <div class="form-group">
+                <label for="form-subject" class="form-label">Subject / Purpose</label>
+                <input type="text" id="form-subject" class="form-input" placeholder="e.g. Applied AI Role / Backend Architecture Collaboration" required>
+              </div>
+
+              <div class="form-group">
+                <label for="form-message" class="form-label">Message Details</label>
+                <textarea id="form-message" class="form-textarea" rows="5" placeholder="Hi Ananta, we reviewed your work with Hybrid RAG and telemetry pipelines and would love to connect..." required></textarea>
+              </div>
+
+              <button type="submit" class="neu-btn neu-btn-primary" style="width:100%; padding:0.9rem;">
+                <i class="fas fa-paper-plane"></i> Send Message Directly
+              </button>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================
+       FOOTER
+       ========================================== -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div style="display:flex; align-items:center; gap:0.75rem;">
+        <div class="nav-logo-icon" style="width:32px; height:32px; font-size:0.8rem;">AKS</div>
+        <div>
+          <strong style="color:var(--text-primary); font-size:0.95rem;">Ananta Kishore Swain</strong>
+          <div style="font-size:0.75rem; color:var(--text-tertiary);">Applied AI & MLOps • Backend Architecture</div>
+        </div>
+      </div>
+
+      <div class="footer-copy">
+        Designed & Built with Neumorphic-Glass UI • © 2026 Ananta Kishore Swain. All Rights Reserved.
+      </div>
+
+      <div>
+        <a href="#hero" class="neu-btn" style="padding:0.4rem 0.9rem; font-size:0.78rem;">
+          <i class="fas fa-arrow-up"></i> Top
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification Element -->
+  <div id="toast" role="status" aria-live="polite"></div>
+
+  <!-- ==========================================
+       INTELLIGENT AI CHATBOT (AKS-AI)
+       ========================================== -->
+  <button id="chatbot-launcher" aria-label="Open AI Assistant">
+    <div class="chatbot-launcher-avatar">
+      <picture>
+        <source srcset="photo/Ananta_profile_photo_2.webp" type="image/webp">
+        <img src="photo/Ananta_profile_photo_2.png" alt="AKS AI Avatar" width="38" height="38">
+      </picture>
+      <div class="chatbot-launcher-pulse"></div>
+    </div>
+    <div class="chatbot-launcher-text">
+      <span class="launcher-title">✨ Ask Ananta's AI</span>
+      <span class="launcher-sub">Powered by Hybrid RAG</span>
+    </div>
+  </button>
+
+  <div id="chatbot-window" role="dialog" aria-modal="true" aria-labelledby="chatbot-heading">
+    <div class="chatbot-header">
+      <div class="chatbot-header-profile">
+        <div class="chatbot-header-avatar">
+          <picture>
+            <source srcset="photo/Ananta_profile_photo_2.webp" type="image/webp">
+            <img src="photo/Ananta_profile_photo_2.png" alt="AKS AI Avatar" width="40" height="40">
+          </picture>
+          <div class="chatbot-header-status"></div>
+        </div>
+        <div class="chatbot-header-info">
+          <h4 id="chatbot-heading">AKS-AI Assistant</h4>
+          <span>Llama 3.2 • RAG Knowledge Base</span>
+        </div>
+      </div>
+
+      <div class="chatbot-header-controls">
+        <button class="chatbot-ctrl-btn chatbot-close-btn" id="chatbot-close-btn" aria-label="Close Chat">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="chatbot-chips-bar">
+      <button class="chatbot-chip" data-prompt="What are Ananta's main skills?">Skills & Stack</button>
+      <button class="chatbot-chip" data-prompt="Explain his Hybrid RAG architecture">Hybrid RAG</button>
+      <button class="chatbot-chip" data-prompt="How did he scale ingestion to 1M+ msg/s?">1M+ Cassandra</button>
+      <button class="chatbot-chip" data-prompt="Show me his GitHub projects">Projects</button>
+      <button class="chatbot-chip" data-prompt="Can I download his resume?">Resume PDF</button>
+      <button class="chatbot-chip" data-prompt="How can I contact or hire him?">Hire Ananta</button>
+    </div>
+
+    <div class="chatbot-messages" id="chatbot-messages">
+      <!-- Dynamically populated by js/chatbot.js -->
+    </div>
+
+    <form class="chatbot-input-form" id="chatbot-input-form">
+      <input type="text" class="chatbot-input" id="chatbot-input" placeholder="Ask anything about Ananta's projects & skills..." autocomplete="off">
+      <button type="submit" class="chatbot-send-btn" aria-label="Send Message">
+        <i class="fas fa-paper-plane"></i>
+      </button>
+    </form>
+  </div>
+
+  <!-- JavaScript Modules -->
+  <script src="js/audio-fx.js"></script>
+  <script src="js/boot-animation.js"></script>
+  <script src="js/intro-popup.js"></script>
+  <script src="js/architecture.js"></script>
+  <script src="js/terminal.js"></script>
+  <script src="js/chatbot.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>
