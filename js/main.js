@@ -278,19 +278,66 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Mobile menu toggle
-  const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+  // Mobile Drawer Menu Controller
+  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
   const mobileDrawer = document.getElementById('mobile-nav-drawer');
+  const mobileBackdrop = document.getElementById('mobile-nav-backdrop');
+  const mobileDrawerClose = document.getElementById('mobile-drawer-close');
+
+  const openMobileDrawer = () => {
+    if (!mobileDrawer) return;
+    mobileDrawer.classList.add('active');
+    if (mobileBackdrop) mobileBackdrop.classList.add('active');
+    if (mobileMenuBtn) {
+      mobileMenuBtn.setAttribute('aria-expanded', 'true');
+      const icon = mobileMenuBtn.querySelector('i');
+      if (icon) icon.className = 'fas fa-times';
+    }
+    document.body.style.overflow = 'hidden';
+    if (window.audioFx) window.audioFx.playModalOpen();
+  };
+
+  const closeMobileDrawer = () => {
+    if (!mobileDrawer) return;
+    mobileDrawer.classList.remove('active');
+    if (mobileBackdrop) mobileBackdrop.classList.remove('active');
+    if (mobileMenuBtn) {
+      mobileMenuBtn.setAttribute('aria-expanded', 'false');
+      const icon = mobileMenuBtn.querySelector('i');
+      if (icon) icon.className = 'fas fa-bars';
+    }
+    document.body.style.overflow = '';
+    if (window.audioFx) window.audioFx.playClick();
+  };
+
   if (mobileMenuBtn && mobileDrawer) {
     mobileMenuBtn.addEventListener('click', () => {
-      mobileDrawer.classList.toggle('active');
-      if (window.audioFx) window.audioFx.playClick();
+      const isOpen = mobileDrawer.classList.contains('active');
+      if (isOpen) {
+        closeMobileDrawer();
+      } else {
+        openMobileDrawer();
+      }
     });
+
+    if (mobileBackdrop) {
+      mobileBackdrop.addEventListener('click', closeMobileDrawer);
+    }
+
+    if (mobileDrawerClose) {
+      mobileDrawerClose.addEventListener('click', closeMobileDrawer);
+    }
 
     mobileDrawer.querySelectorAll('a').forEach(a => {
       a.addEventListener('click', () => {
-        mobileDrawer.classList.remove('active');
+        closeMobileDrawer();
       });
+    });
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && mobileDrawer.classList.contains('active')) {
+        closeMobileDrawer();
+      }
     });
   }
 });

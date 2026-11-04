@@ -188,27 +188,53 @@
           <i class="fas fa-sun"></i>
         </button>
 
-        <a href="Ananta_Kishore_Swain_Resume.pdf" download="Ananta_Kishore_Swain_Resume.pdf" class="neu-btn neu-btn-primary" style="padding:0.48rem 1.15rem; font-size:0.84rem;">
+        <a href="Ananta_Kishore_Swain_Resume.pdf" download="Ananta_Kishore_Swain_Resume.pdf" class="neu-btn neu-btn-primary nav-resume-btn" style="padding:0.48rem 1.15rem; font-size:0.84rem;">
           <i class="fas fa-file-pdf"></i> Resume
         </a>
 
-        <button class="neu-icon-btn mobile-menu-btn" aria-label="Toggle Mobile Menu">
+        <button class="neu-icon-btn mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Mobile Menu" aria-expanded="false">
           <i class="fas fa-bars"></i>
         </button>
       </div>
     </div>
   </header>
 
-  <!-- Mobile Drawer Menu -->
-  <div id="mobile-nav-drawer" class="mobile-nav-drawer">
-    <a href="#overview" class="mobile-nav-link"><i class="fas fa-home"></i> Overview</a>
-    <a href="#projects" class="mobile-nav-link"><i class="fas fa-laptop-code"></i> Projects</a>
-    <a href="#architecture" class="mobile-nav-link"><i class="fas fa-project-diagram"></i> Architecture</a>
-    <a href="#experience" class="mobile-nav-link"><i class="fas fa-briefcase"></i> Experience</a>
-    <a href="#skills" class="mobile-nav-link"><i class="fas fa-code"></i> Skills</a>
-    <a href="#terminal" class="mobile-nav-link"><i class="fas fa-terminal"></i> Terminal</a>
-    <a href="#education" class="mobile-nav-link"><i class="fas fa-graduation-cap"></i> Education & Honors</a>
-    <a href="#contact" class="mobile-nav-link"><i class="fas fa-envelope"></i> Contact</a>
+  <!-- Mobile Drawer Backdrop & Menu -->
+  <div id="mobile-nav-backdrop" class="mobile-nav-backdrop" aria-hidden="true"></div>
+  <div id="mobile-nav-drawer" class="mobile-nav-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+    <div class="mobile-drawer-header">
+      <div class="nav-brand">
+        <div class="nav-logo-icon">AKS</div>
+        <div class="nav-brand-text">
+          <span class="nav-brand-name">Ananta Swain</span>
+          <span class="nav-brand-tag">AI & MLOps</span>
+        </div>
+      </div>
+      <button id="mobile-drawer-close" class="neu-icon-btn" aria-label="Close Menu">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    
+    <div class="mobile-drawer-links">
+      <a href="#hero" class="mobile-nav-link"><i class="fas fa-home"></i> Home</a>
+      <a href="#overview" class="mobile-nav-link"><i class="fas fa-chart-line"></i> Overview & Metrics</a>
+      <a href="#projects" class="mobile-nav-link"><i class="fas fa-laptop-code"></i> Projects</a>
+      <a href="#architecture" class="mobile-nav-link"><i class="fas fa-project-diagram"></i> Architecture</a>
+      <a href="#experience" class="mobile-nav-link"><i class="fas fa-briefcase"></i> Experience</a>
+      <a href="#skills" class="mobile-nav-link"><i class="fas fa-code"></i> Skills</a>
+      <a href="#terminal" class="mobile-nav-link"><i class="fas fa-terminal"></i> Terminal</a>
+      <a href="#education" class="mobile-nav-link"><i class="fas fa-graduation-cap"></i> Education & Honors</a>
+      <a href="#contact" class="mobile-nav-link"><i class="fas fa-envelope"></i> Contact</a>
+    </div>
+
+    <div class="mobile-drawer-actions">
+      <a href="Ananta_Kishore_Swain_Resume.pdf" download="Ananta_Kishore_Swain_Resume.pdf" class="neu-btn neu-btn-primary" style="width:100%;">
+        <i class="fas fa-file-pdf"></i> Download Resume
+      </a>
+      <a href="https://github.com/ananta12-d" target="_blank" rel="noopener noreferrer" class="neu-btn" style="width:100%;">
+        <i class="fab fa-github"></i> GitHub Profile
+      </a>
+    </div>
   </div>
 
   <!-- ==========================================
