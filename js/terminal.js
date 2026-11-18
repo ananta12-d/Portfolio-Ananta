@@ -24,8 +24,8 @@ Available system commands:
   • <span class="term-response-highlight">metrics</span>     - Production telemetry & scaling stats
   • <span class="term-response-highlight">resume</span>      - Download official PDF resume
   • <span class="term-response-highlight">github</span>      - Open GitHub profile (ananta12-d)
-  • <span class="term-response-highlight">hackindia</span>   - Open HackIndia profile (ananta_kishore_swain)
-  • <span class="term-response-highlight">csharpcorner</span> - Open C# Corner community profile
+  • <span class="term-response-highlight">csharp</span>       - C# Corner author metrics (Rank #2,024, 39.7k reads, articles)
+  • <span class="term-response-highlight">hackindia</span>    - HackIndia hackathon submissions (Rank #77)
   • <span class="term-response-highlight">contact</span>     - Direct contact channels (Email, Phone, GitHub, LinkedIn)
   • <span class="term-response-highlight">hire</span>        - Open direct collaboration inquiry
   • <span class="term-response-highlight">clear</span>       - Clear the terminal console
@@ -35,7 +35,7 @@ Available system commands:
 <span class="term-response-highlight">[ENGINEER IDENTITY: ANANTA KISHORE SWAIN]</span>
 Role: Software Engineer - Applied AI, MLOps & High-Concurrency Backend Architecture
 Base: Bhubaneswar & Angul, Odisha, India
-Education: Master of Computer Applications (MCA) in AI — Manipal Institute of Technology [Pursuing: Feb 2026 – Present]
+Education: Master of Computer Applications (MCA) in AI — Manipal University Jaipur [Pursuing: Feb 2026 – Present]
 GitHub: <a href="https://github.com/ananta12-d" target="_blank" style="color:#38bdf8; text-decoration:underline;">https://github.com/ananta12-d</a>
 
 "I bridge the gap between high-performance backend infrastructure and Generative AI.
@@ -143,6 +143,7 @@ Architecture Breakdown:
 • Storage Efficiency:    <strong style="color:#10b981;">5× reduction</strong> (Time-series isolation)
 • LLM Workload Uptime:   <strong style="color:#10b981;">99.9% SLA</strong> (Docker CPU Governance)
 • Secure VPN Concurrency:<strong style="color:#10b981;">500+ active users</strong> (WireGuard Platform)
+• C# Corner Reads:       <strong style="color:#06b6d4;">39,700+ (39.7k)</strong> (Rank #2,024 • 721 Points)
 `,
 
     resume: () => {
@@ -165,9 +166,30 @@ Architecture Breakdown:
       return `<span style="color:#10b981;">[NAVIGATING] Opening HackIndia profile (ananta_kishore_swain)...</span>`;
     },
 
-    csharpcorner: () => {
-      window.open('https://www.c-sharpcorner.com/members/ananta-kishore-swain', '_blank');
-      return `<span style="color:#10b981;">[NAVIGATING] Opening C# Corner profile (ananta-kishore-swain)...</span>`;
+    csharp: () => `
+<span class="term-response-highlight">[C# CORNER AUTHOR & PUBLICATION METRICS]</span>
+• Author Rank:     <strong style="color:#f59e0b;">#2,024</strong>
+• Total Reads:     <strong style="color:#06b6d4;">39,700+ (39.7k)</strong>
+• Community Pts:   <strong style="color:#10b981;">721 Points</strong>
+• Headline:        Full-Stack Developer | IoT Systems | FastAPI
+• Contributions:   11 Total Publications
+                   ├── 6 Technical Articles
+                   ├── 4 Engineering Blogs
+                   └── 1 Technical Forum Solution
+• Expertise Split: Backend & FastAPI (50%) | AI (20%) | IoT (20%) | LLMs (10%)
+• Featured Works:
+  1. "Your LLM Stream Disconnected. Did the Answer Finish?" (Article)
+  2. "Your Deployment Passed. Your Database..." (Article)
+  3. "When Is the Right Time to Switch Companies & Salary Hikes" (Forum)
+• Profile URL:     <a href="https://www.c-sharpcorner.com/members/ananta-kishore-swain" target="_blank" style="color:#38bdf8; text-decoration:underline;">c-sharpcorner.com/members/ananta-kishore-swain</a>
+`,
+
+    csharpcorner: function() {
+      return this.csharp();
+    },
+
+    articles: function() {
+      return this.csharp();
     },
 
     contact: () => `

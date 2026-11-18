@@ -306,8 +306,30 @@ class AksAiChatbot {
       };
     }
 
+    // 8.5 C# Corner & Technical Publications Intent
+    if (q.includes('c#') || q.includes('csharp') || q.includes('article') || q.includes('blog') || q.includes('publication') || q.includes('reads') || q.includes('writer') || q.includes('author')) {
+      return {
+        html: "<strong>Ananta's Verified C# Corner Technical Metrics:</strong><br><br>" +
+              "🏆 <strong>Author Rank:</strong> <span style='color:#f59e0b;'>#2,024</span><br>" +
+              "📖 <strong>Total Reads:</strong> <span style='color:#06b6d4;'>39,700+ (39.7k)</span><br>" +
+              "🛡️ <strong>Points:</strong> <span style='color:#10b981;'>721 Community Points</span><br>" +
+              "✍️ <strong>Publications:</strong> 11 (6 Articles, 4 Blogs, 1 Forum)<br>" +
+              "📊 <strong>Expertise Split:</strong> Backend/FastAPI (50%), AI (20%), IoT (20%), LLMs (10%)<br><br>" +
+              "<strong>Featured Technical Works:</strong><br>" +
+              "• <em>'Your LLM Stream Disconnected. Did the Answer Finish?'</em> (Article on SSE streaming resiliency)<br>" +
+              "• <em>'Your Deployment Passed. Your Database...'</em> (Article on zero-downtime database migrations)<br>" +
+              "• <em>'When Is the Right Time to Switch Companies & Salary Hikes'</em> (Engineering Career Forum)",
+        action: {
+          label: '<i class="fas fa-external-link-alt"></i> Open C# Corner Profile',
+          handler: () => {
+            window.open('https://www.c-sharpcorner.com/members/ananta-kishore-swain', '_blank');
+          }
+        }
+      };
+    }
+
     // 9. Contact / Hire / Location / Availability / Developer Profiles
-    if (q.includes('contact') || q.includes('hire') || q.includes('email') || q.includes('phone') || q.includes('location') || q.includes('available') || q.includes('reach') || q.includes('hackindia') || q.includes('c#') || q.includes('csharp')) {
+    if (q.includes('contact') || q.includes('hire') || q.includes('email') || q.includes('phone') || q.includes('location') || q.includes('available') || q.includes('reach') || q.includes('hackindia')) {
       return {
         html: "<strong>Contact & Community Profiles:</strong><br><br>" +
               "Ananta is <strong>actively open to Applied AI & Backend Engineering opportunities</strong> (Full-time, Hybrid, or Remote).<br><br>" +
